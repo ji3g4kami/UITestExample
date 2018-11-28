@@ -9,9 +9,13 @@
 import XCTest
 
 class testUITests: XCTestCase {
+    
+    let app = XCUIApplication()
+    var tableView: XCUIElement!
+    
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.tableView = app.tables["MyTable"]
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
@@ -26,9 +30,25 @@ class testUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testChangeTableRowText() {
+        let cell = tableView.cells.containing(.cell, identifier: "3")
+        let cellLabelText = cell.staticTexts.element(boundBy: 0).label
+        XCTAssertEqual(cellLabelText, "Fourth Row")
+        
+        cell.staticTexts.element(boundBy: 0).tap()
+        XCTAssertEqual(app.staticTexts["titleLabel"].label, cellLabelText)
+        
+        let textField = app.otherElements.textFields["titleTextField"]
+        textField.tap()
+        textField.typeText("Some new value")
+        
+        XCTAssertEqual(textField.value as? String ?? "", "Some new value")
+        
+//        app.otherElements.containing(.navigationBar, identifier:"test.DetailView").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element.tap()
+        app.navigationBars["test.DetailView"].buttons["Back"].tap()
+        
+        XCTAssertEqual(cell.staticTexts.element(boundBy: 0).label, "Some new value")
+        
     }
 
 }
