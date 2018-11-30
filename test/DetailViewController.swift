@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var DVImage: UIImageView!
     @IBOutlet weak var textField: UITextField!
     weak var originVC: ViewController?
     var titleName = ""
@@ -25,6 +27,8 @@ class DetailViewController: UIViewController {
         navigationItem.hidesBackButton = true
         let newBackButton = UIBarButtonItem(title: "Back", style: .done, target: self, action: #selector(handleBack))
         navigationItem.leftBarButtonItem = newBackButton
+        
+        DVImage.kf.setImage(with: URL(string: "https://reading.udn.com/appspace/thought/1001/cover.jpg")!)
     }
     
     @objc func handleBack() {

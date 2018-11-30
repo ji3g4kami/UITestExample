@@ -43,12 +43,9 @@ class testUITests: XCTestCase {
         textField.typeText("Some new value")
         
         XCTAssertEqual(textField.value as? String ?? "", "Some new value")
-        
-//        app.otherElements.containing(.navigationBar, identifier:"test.DetailView").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element.tap()
         app.navigationBars["test.DetailView"].buttons["Back"].tap()
         
         XCTAssertEqual(cell.staticTexts.element(boundBy: 0).label, "Some new value")
-        
     }
 
 }

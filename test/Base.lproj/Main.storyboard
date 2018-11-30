@@ -76,19 +76,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ahf-lM-a62">
+                                <rect key="frame" x="67.5" y="519" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Kga-CC-GTR"/>
+                                    <constraint firstAttribute="width" constant="240" id="uIk-AL-1eC"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qDs-Bz-22f" firstAttribute="centerY" secondItem="jC1-EL-e4B" secondAttribute="centerY" id="4a2-oy-xDa"/>
                             <constraint firstItem="6zk-GT-CzR" firstAttribute="centerY" secondItem="jC1-EL-e4B" secondAttribute="centerY" constant="-60" id="Tta-bi-GsJ"/>
+                            <constraint firstItem="Ahf-lM-a62" firstAttribute="centerX" secondItem="jC1-EL-e4B" secondAttribute="centerX" id="a3P-GD-aJ2"/>
                             <constraint firstItem="HpB-7y-n72" firstAttribute="trailing" secondItem="qDs-Bz-22f" secondAttribute="trailing" constant="60" id="cXl-EQ-6fZ"/>
                             <constraint firstItem="qDs-Bz-22f" firstAttribute="leading" secondItem="HpB-7y-n72" secondAttribute="leading" constant="60" id="huY-Ft-wlv"/>
                             <constraint firstItem="qDs-Bz-22f" firstAttribute="centerX" secondItem="jC1-EL-e4B" secondAttribute="centerX" id="iW5-b6-XkX"/>
                             <constraint firstItem="6zk-GT-CzR" firstAttribute="centerX" secondItem="jC1-EL-e4B" secondAttribute="centerX" id="lkb-1m-e3h"/>
+                            <constraint firstItem="HpB-7y-n72" firstAttribute="bottom" secondItem="Ahf-lM-a62" secondAttribute="bottom" constant="20" id="ubr-qw-JbN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HpB-7y-n72"/>
                     </view>
                     <connections>
+                        <outlet property="DVImage" destination="Ahf-lM-a62" id="E9a-7F-V9O"/>
                         <outlet property="textField" destination="qDs-Bz-22f" id="PY1-WY-hWo"/>
                         <outlet property="titleLabel" destination="6zk-GT-CzR" id="JSo-Fz-YX9"/>
                     </connections>
