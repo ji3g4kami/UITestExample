@@ -16,6 +16,8 @@
 		403C5E7D21AE774300D449AB /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403C5E7C21AE774300D449AB /* testTests.swift */; };
 		403C5E8821AE774300D449AB /* testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403C5E8721AE774300D449AB /* testUITests.swift */; };
 		403C5E9621AE7B2100D449AB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403C5E9521AE7B2100D449AB /* DetailViewController.swift */; };
+		40FC79C621B66F0E00CDEA7F /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC79C421B66F0E00CDEA7F /* InfoCell.swift */; };
+		40FC79C721B66F0E00CDEA7F /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40FC79C521B66F0E00CDEA7F /* InfoCell.xib */; };
 		A354F883C2CC1D496C10DA56 /* Pods_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A2982120423618B550FA86 /* Pods_test.framework */; };
 		FA9380E7287F973D2DA1A1D3 /* Pods_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06679761919DC853674D5D8E /* Pods_testTests.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +57,8 @@
 		403C5E8721AE774300D449AB /* testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITests.swift; sourceTree = "<group>"; };
 		403C5E8921AE774300D449AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		403C5E9521AE7B2100D449AB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		40FC79C421B66F0E00CDEA7F /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		40FC79C521B66F0E00CDEA7F /* InfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
 		91432AA0EC690CA72824CB6E /* Pods-testUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testUITests.debug.xcconfig"; path = "Target Support Files/Pods-testUITests/Pods-testUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9896D830AEDBDB665552D920 /* Pods-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTests.release.xcconfig"; path = "Target Support Files/Pods-testTests/Pods-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		9900E4EAA826E8CE359D6504 /* Pods-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.release.xcconfig"; path = "Target Support Files/Pods-test/Pods-test.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,7 +105,6 @@
 				91432AA0EC690CA72824CB6E /* Pods-testUITests.debug.xcconfig */,
 				AF1A02C0C9BBC8651054E853 /* Pods-testUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -137,6 +140,8 @@
 				403C5E7021AE774300D449AB /* LaunchScreen.storyboard */,
 				403C5E7321AE774300D449AB /* Info.plist */,
 				403C5E9521AE7B2100D449AB /* DetailViewController.swift */,
+				40FC79C421B66F0E00CDEA7F /* InfoCell.swift */,
+				40FC79C521B66F0E00CDEA7F /* InfoCell.xib */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				403C5E7221AE774300D449AB /* LaunchScreen.storyboard in Resources */,
+				40FC79C721B66F0E00CDEA7F /* InfoCell.xib in Resources */,
 				403C5E6F21AE774300D449AB /* Assets.xcassets in Resources */,
 				403C5E6D21AE774200D449AB /* Main.storyboard in Resources */,
 			);
@@ -396,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				403C5E9621AE7B2100D449AB /* DetailViewController.swift in Sources */,
+				40FC79C621B66F0E00CDEA7F /* InfoCell.swift in Sources */,
 				403C5E6A21AE774200D449AB /* ViewController.swift in Sources */,
 				403C5E6821AE774200D449AB /* AppDelegate.swift in Sources */,
 			);

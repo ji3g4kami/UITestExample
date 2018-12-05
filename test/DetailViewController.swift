@@ -28,6 +28,8 @@ class DetailViewController: UIViewController {
         let newBackButton = UIBarButtonItem(title: "Back", style: .done, target: self, action: #selector(handleBack))
         navigationItem.leftBarButtonItem = newBackButton
         
+        textField.isAccessibilityElement = true
+        
         DVImage.kf.setImage(with: URL(string: "https://reading.udn.com/appspace/thought/1001/cover.jpg")!)
     }
     

@@ -25,6 +25,8 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.accessibilityIdentifier = "MyTable"
+        let xib = UINib(nibName: String(describing: InfoCell.self), bundle: nil)
+        tableView.register(xib, forCellReuseIdentifier: String(describing: InfoCell.self))
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -49,8 +51,9 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = dataArray[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: InfoCell.self), for: indexPath) as? InfoCell else { return UITableViewCell() }
+        cell.leftLabel.text = dataArray[indexPath.row]
+//        cell.textLabel?.text = dataArray[indexPath.row]
         cell.accessibilityIdentifier = String(indexPath.row)
         return cell
     }
